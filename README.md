@@ -99,6 +99,27 @@ Use POSTMAN to try the following endpoints:
    
      ]
 
+## Get Honors students
+
+### Request
+
+    `GET /students/honors?gpa=3.5`
+
+    `http://localhost:8080/students/honors?gpa=3.5`
+
+   
+### Response
+
+   [
+   
+     {"studentId": 1, "name": "sample1", "major": "csc", "gpa": 3.89}, 
+   
+     {"studentId": 2, "name": "sample2", "major": "mat", "gpa": 4.0},    
+
+     { "studentId": 4, "name": "sample4", "major": "csc", "gpa": 3.55}
+     
+   ]
+
 ## Update an existing Student
 
 ### Request
