@@ -64,7 +64,7 @@ Use POSTMAN to try the following endpoints:
 
     `POST /students/new`
     
-    `http://localhost:8080/students/new` --data '{ "studentId": 4, "name": "sample4", "major": "csc", "gpa": 3.55}'
+    `http://localhost:8080/students/new` --data '{ "name": "sample4", "major": "csc", "gpa": 3.55}'
 
    ### Response
 
@@ -105,7 +105,7 @@ Use POSTMAN to try the following endpoints:
 
     `PUT /students/update/{studentId}`
     
-    `http://localhost:8080/students/update/1` --data '{ "studentId": 1, "name": "sampleUpdated", "major": "csc", "gpa": 3.92}'
+    `http://localhost:8080/students/update/1` --data '{ "name": "sampleUpdated", "major": "csc", "gpa": 3.92}'
 
    ### Response
    
