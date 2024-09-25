@@ -10,7 +10,7 @@ The REST API performs CRUD operations on Student objects as described below.
     - download zip.
 - Open the project in IntelliJ.
 - [`/src/main/resources/application.properties`](https://github.com/uncg-csc340/f24-crud-api-jpa/blob/8f6ea1be819075df59ed06bd5b8975eccb636712/src/main/resources/application.properties) file  is the configuration for the MySQL database on your localhost.
-  - the database name is between the last `/` and the `?`. In this case the database name is `f24-340`.
+  - the database name is on the datasource.url property between the last `/` and the `?`. In this case the database name is `f24-340`.
   - You MUST have the database up and running before running the project! 
     - Open your XAMPP Control Panel.
     - Start the Apache server.
