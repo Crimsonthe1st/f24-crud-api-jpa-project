@@ -22,135 +22,65 @@ The REST API performs CRUD operations on Student objects as described below.
 ## API Endpoints
 Use POSTMAN to try the following endpoints:
 
-## Get list of Students
+## Get list of Animals
 
 ### Request
 
-    `GET /students/all`
+    `GET /animals/all`
 
-    `http://localhost:8080/students/all`
+    `http://localhost:8080/animals/all`
 
-   
-### Response
 
-     [
-   
-     {"studentId": 1, "name": "sample1", "major": "csc", "gpa": 3.89}, 
-   
-     {"studentId": 2, "name": "sample2", "major": "mat", "gpa": 4.0}, 
-   
-     { "studentId": 3, "name": "sample3", "major": "eng", "gpa": 3.25}
-   
-     ]
-
-## Get a specific Student
+## Get a specific Animal
 
 ### Request
 
-`GET /students/{studentId}`
+`GET /animal/{animalID}`
 
-`http://localhost:8080/students/1`
-
-### Response
-
-    {
-      "studentId": 1, "name": "sample1", "major": "csc", "gpa": 3.89
-    }
+`http://localhost:8080/animal/2`
 
      
-## Create a new Student
+## Create a new Animal
 
 ### Request
 
-    `POST /students/new`
+    `POST /animal/new`
     
-    `http://localhost:8080/students/new` --data '{ "name": "sample4", "major": "csc", "gpa": 3.55}'
+    `http://localhost:8080/animal/new` --data '{ "name": "sample4", "habitat": "home", "species": "species"}'
 
-   ### Response
 
-   [
-   
-     {"studentId": 1, "name": "sample1", "major": "csc", "gpa": 3.89}, 
-   
-     {"studentId": 2, "name": "sample2", "major": "mat", "gpa": 4.0}, 
-   
-     { "studentId": 3, "name": "sample3", "major": "eng", "gpa": 3.25},
-
-     { "studentId": 4, "name": "sample4", "major": "csc", "gpa": 3.55}
-   
-  ]
-
-## Get Students by major
+## Get Animal by species
 
 ### Request
 
-    `GET /students?major=csc`
+    `GET /animal?species=species`
 
-    `http://localhost:8080/students?major=csc`
+    `http://localhost:8080/animal?species=species`
 
-   
-### Response
 
-     [
-   
-      {"studentId": 1, "name": "sample1", "major": "csc", "gpa": 3.89}, 
-   
-      { "studentId": 4, "name": "sample4", "major": "csc", "gpa": 3.55}
-   
-     ]
-
-## Get Honors students
+## Get matching names of animals
 
 ### Request
 
-    `GET /students/honors?gpa=3.5`
+    `GET /animal/name?gpa=sample4`
 
-    `http://localhost:8080/students/honors?gpa=3.5`
+    `http://localhost:8080/animals/name?contains=sample`
 
-   
-### Response
 
-   [
-   
-     {"studentId": 1, "name": "sample1", "major": "csc", "gpa": 3.89}, 
-   
-     {"studentId": 2, "name": "sample2", "major": "mat", "gpa": 4.0},    
-
-     { "studentId": 4, "name": "sample4", "major": "csc", "gpa": 3.55}
-     
-   ]
 
 ## Update an existing Student
 
 ### Request
 
-    `PUT /students/update/{studentId}`
+    `PUT /animal/update/{studentId}`
     
-    `http://localhost:8080/students/update/1` --data '{ "name": "sampleUpdated", "major": "csc", "gpa": 3.92}'
-
-   ### Response
-   
-    {
-      "studentId": 1, "name": "sampleUpdated", "major": "csc", "gpa": 3.92
-    }
+    `http://localhost:8080/animal/update/1` --data '{ "name": "sampleUpdated", "habitat": "home", "species": "species"}'
 
 
 ## Delete an existing Student
 
 ### Request
 
-    `DELETE /students/delete/{studentId}`
+    `DELETE /animal/delete/{animalID}`
     
-    `http://localhost:8080/students/delete/1`
-
-   ### Response
-   
-   [
-   
-     {"studentId": 2, "name": "sample2", "major": "mat", "gpa": 4.0}, 
-   
-     { "studentId": 3, "name": "sample3", "major": "eng", "gpa": 3.25},
-
-     { "studentId": 4, "name": "sample4", "major": "csc", "gpa": 3.55}
-   
-  ]
+    `http://localhost:8080/animal/delete/1`
